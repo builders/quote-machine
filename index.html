@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Random Quote Machine</title>
+    <meta name="description" content="A Random Quote Machine" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="style.css" media="screen" />
+  </head>
+  <body>
+    <main id="quote-box" class="content">
+      <div id="display">
+        <blockquote id="quote">
+          <div id="text">The place God calls you to is the place where your deep gladness and the world’s deep hunger meet.</div>
+          <footer id="author">— Frederick Buechner</footer>
+        </blockquote>
+      </div>
+      <div id="panel" class="buttons">
+        <a id="tweet-quote"
+          class="start button"
+          href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22The%20place%20God%20calls%20you%20to%20is%20the%20place%20where%20your%20deep%20gladness%20and%20the%20world%E2%80%99s%20deep%20hunger%20meet.%22%20%E2%80%94%20Frederick%20Buechner"
+          target="_blank"
+          value="tweet"
+          data-key="ArrowLeft"
+          data-keycode="37">Tweet</a>
+        <a id="new-quote"
+          class="reset button"
+          value="new-quote"
+          data-key="ArrowRight"
+          data-keycode="39">New Quote</a>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

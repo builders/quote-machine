@@ -1,0 +1,188 @@
+/*
+====================================
+
+Random Quote Machine CSS
+
+====================================
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  font-family: Helvetica, sans-serif;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
+------------------------------------
+Display
+------------------------------------ */
+
+#display {
+  font-weight: normal;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0;
+  padding: .5em;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quote {
+  position: relative;
+  top: -3em;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+#quote::before {
+  content: '‘‘';
+  font-size: 6em;
+  font-weight: bold;
+  letter-spacing: -0.07em;
+  color: #fff;
+  color: rgba(255,255,255,.15);
+  position: relative;
+  top: .5em;
+}
+
+#author {
+  font-size: .6em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-top: 2em;
+  color: #fff;
+  color: rgba(255,255,255,.5);
+}
+
+/*
+------------------------------------
+Buttons
+------------------------------------ */
+
+#panel {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+}
+
+.button {
+  font-size: 1.2em;
+  text-align: center;
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  padding: .5em .75em;
+  border-radius: 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-quote {
+  top: 0;
+  left: 50%;
+}
+
+#tweet-quote {
+  top: 0;
+  left: 0;
+}
+
+/*
+------------------------------------
+Color
+------------------------------------ */
+
+#display {
+  color: #fff;
+  background: #000;
+}
+
+.button {
+  color: #fff;
+  background: #444;
+  border: 1px solid #000;
+}
+
+.button:hover {
+  background: #333;
+}
+
+.button.select,
+.button:active {
+  background: #222;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+
+/*
+------------------------------------
+Media Queries
+------------------------------------ */
+
+@media (min-width: 600px) and (orientation: portrait) {
+
+  #display {
+    font-size: 2em;
+  }
+
+  .button {
+    font-size: 1.6em;
+  }
+
+}
+
+@media (max-width: 750px) and (orientation: landscape) {
+
+  #panel {
+    top: 80%;
+    height: 20%;
+  }
+
+}
+
+@media (min-width: 750px) {
+
+  #display {
+    font-size: 2.4em;
+  }
+
+  #quote {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .button {
+    font-size: 2em;
+  }
+
+}
